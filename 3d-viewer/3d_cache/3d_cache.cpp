@@ -34,7 +34,11 @@
 #include <wx/log.h>
 #include <wx/stdpaths.h>
 
+#if BOOST_VERSION >= 106800
+#include <boost/uuid/detail/sha1.hpp>
+#else
 #include <boost/uuid/sha1.hpp>
+#endif
 
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
